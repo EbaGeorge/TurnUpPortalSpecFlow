@@ -21,12 +21,14 @@ namespace TurnUpPortalSpecFlow.Features
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("TimeMaterialFeature")]
+    [NUnit.Framework.CategoryAttribute("regression")]
     public partial class TimeMaterialFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "regression"};
         
 #line 1 "TimeMaterialFeature.feature"
 #line hidden
@@ -74,6 +76,18 @@ namespace TurnUpPortalSpecFlow.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void FeatureBackground()
+        {
+#line 8
+#line hidden
+#line 9
+  testRunner.Given("I logged into TurnUp portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 10
+  testRunner.When("I navigate to the Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+        }
+        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("1 Create a Time record with valid data")]
         [NUnit.Framework.CategoryAttribute("createtimerecord")]
@@ -92,7 +106,7 @@ namespace TurnUpPortalSpecFlow.Features
             argumentsOfScenario.Add("Price", price);
             argumentsOfScenario.Add("Description", description);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1 Create a Time record with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+#line 13
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -102,16 +116,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
- testRunner.Given("I logged into TurnUp portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+this.FeatureBackground();
 #line hidden
-#line 10
- testRunner.When("I navigate to the Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 14
+ testRunner.When(string.Format("I created a new Time record with \'{0}\',\'{1}\',\'{2}\'", code, price, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 11
- testRunner.And(string.Format("I created a new Time record with \'{0}\',\'{1}\',\'{2}\'", code, price, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 12
+#line 15
  testRunner.Then(string.Format("the Time record should be created successfully with new \'{0}\',\'{1}\',\'{2}\'", code, price, description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -131,7 +142,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("EditedPrice", editedPrice);
             argumentsOfScenario.Add("EditedDescription", editedDescription);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2 Edit the newly created Time record", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 19
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -141,16 +152,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 20
- testRunner.Given("I logged into TurnUp portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 21
- testRunner.When("I navigate to the Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 22
- testRunner.And(string.Format("I updated the \'{0}\',\'{1}\',\'{2}\' of Time record", editedCode, editedPrice, editedDescription), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 8
+this.FeatureBackground();
 #line hidden
 #line 23
+ testRunner.When(string.Format("I updated the \'{0}\',\'{1}\',\'{2}\' of Time record", editedCode, editedPrice, editedDescription), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 24
  testRunner.Then(string.Format("the time record should be updated with new \'{0}\',\'{1}\',\'{2}\'", editedCode, editedPrice, editedDescription), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -166,7 +174,7 @@ this.ScenarioInitialize(scenarioInfo);
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Code", code);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3 Delete newly created Time record", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 30
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -176,16 +184,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 31
- testRunner.Given("I logged into TurnUp portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+this.FeatureBackground();
 #line hidden
 #line 32
- testRunner.When("I navigate to the Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I deleted a Time record with \'{0}\'", code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 33
- testRunner.And(string.Format("I deleted a Time record with \'{0}\'", code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 34
  testRunner.Then(string.Format("the Time record with \'{0}\' should be deleted successfully", code), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
