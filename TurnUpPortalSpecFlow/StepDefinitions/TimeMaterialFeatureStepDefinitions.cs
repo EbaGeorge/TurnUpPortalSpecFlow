@@ -64,15 +64,7 @@ namespace TurnUpPortalSpecFlow.StepDefinitions
         {
            timeMaterialObj.VerifyTableData(driver,code,price,description);
             string type = timeMaterialObj.GetTypeCode(driver);
-            Assert.That(type == "M", "Actual Typecode and Expected Typecode does not match");
-            //string editedCode=timeMaterialObj.GetEditedCode(driver);
-            //string editedPrice=timeMaterialObj.GetPrice(driver);
-            //string editedDescription=timeMaterialObj.GetDescription(driver);
-            //string editedTypeCode=timeMaterialObj.GetTypeCode(driver);
-            //Assert.That(editedCode == code, "Actual code and Expected code does not match");
-            //Assert.That(editedDescription == description, "Actual description and Expected description does not match");
-            //Assert.That(editedPrice == price, "Actual price and Expected price does not match");
-            //Assert.That(editedTypeCode == "M", "Actual TypeCode and Expected TypeCode does not match");
+            Assert.That(type == "M", "Actual Typecode and Expected Typecode does not match")
         }
 
         [When(@"I deleted a Time record with '([^']*)'")]
